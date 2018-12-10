@@ -1,0 +1,38 @@
+{
+  "name": "axe-test-server",
+  "version": "0.2.0-alpha.0",
+  "description": "a server by nodeJS to connect with the device and the test script",
+  "main": "index.js",
+  "bin": {
+    "axe-test-server": "./bin/www.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/axe-org/axe-test-server.git"
+  },
+  "keywords": [
+    "axe"
+  ],
+  "author": "lxm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axe-org/axe-test-server/issues"
+  },
+  "homepage": "https://github.com/axe-org/axe-test-server#README",
+  "dependencies": {
+    "axe-data-serialization": "0.0.3",
+    "body-parser": "^1.18.3",
+    "dateformat": "^3.0.3",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.0.0",
+    "formidable": "^1.2.1",
+    "multer": "^1.4.1",
+    "rimraf": "^2.6.2",
+    "sqlite": "^3.0.0",
+    "unzipper": "^0.9.4"
+  }
+}
