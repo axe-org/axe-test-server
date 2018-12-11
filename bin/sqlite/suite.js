@@ -16,7 +16,7 @@ function initDB (db) {
    * features: 测试分组数量。
    * scenarios : 测试用例数量。
    * passedNumber: 通过的测试用例数量
-   * status: 测试状态 ， TODO 说明 为 passed / failed / error / crashed 三种。 failed 为 asset的错误。 crashed 是崩溃导致的错误， 而error是其他异常，一般为找不到控件之类可以避免的错误。
+   * status: 测试状态 ， TODO 说明 为 passed / failed / error / crashed 三种。 failed 为 assert的错误。 crashed 是崩溃导致的错误， 而error是其他异常，一般为找不到控件之类可以避免的错误。
    * profile : 性能测试类型。 性能测试的文件存储位置为 ./suite_id/profileName.trace
    */
   return _db.run(`CREATE TABLE IF NOT EXISTS suite (

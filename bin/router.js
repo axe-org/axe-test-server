@@ -141,8 +141,8 @@ function mark (req, res) {
   })
 }
 
-// 记录 Asset的错误，将 Asset失败 与 error 进行分离。
-function recordAssetError (req, res) {
+// 记录 Assert的错误，将 Assert失败 与 error 进行分离。
+function recordAssertError (req, res) {
 
 }
 
