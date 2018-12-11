@@ -19,7 +19,7 @@ function initDB (db) {
     suite_id INTEGER NOT NULL,
     feature_id INTEGER,
     title VARCHAR(100) NOT NULL,
-    status VARCHAR(50),
+    status VARCHAR(50) NOT NULL,
     start_time INT(14),
     end_time INT(14),
     duration INTEGER,
@@ -33,7 +33,7 @@ function initDB (db) {
  * 创建一个feature , 返回值为 id.
  */
 function createScenario (scenarioInfo) {
-  return _db.run(`INSERT INTO scenario VALUES (NULL, ? , NULL, ? , NULL , ? , NULL , NULL , NULL)`,
+  return _db.run(`INSERT INTO scenario VALUES (NULL, ? , NULL, ? , 'passed' , ? , NULL , NULL , NULL)`,
     [scenarioInfo.suiteID, scenarioInfo.title, scenarioInfo.startTime]).then(stmt => {
     return stmt.lastID
   })

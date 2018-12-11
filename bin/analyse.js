@@ -79,8 +79,6 @@ async function analyse (uploadData, savePath) {
         }
         currentFeature.status = scenario.status
         suiteStatus = scenario.status
-        // TODO 这里有一个问题， 异常时，没有 scenario.status
-        console.log('suiteStatus ' + suiteStatus)
       }
       let stack = testcase.failure
       if (stack) {

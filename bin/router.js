@@ -11,7 +11,8 @@ function uploadOperation (req, res) {
   sqlite.operation.saveOperation(req.body).then(() => {
     res.json({})
   }).catch(err => {
-    console.log(err.message)
+    console.log('uploadOperation')
+    console.log(err)
     res.json({error: err.message})
   })
 }
@@ -27,7 +28,8 @@ function setSavePath (req, res) {
   sqlite.initDB(path.join(savePath, 'sqlite3.db')).then(() => {
     res.json({})
   }).catch(err => {
-    console.log(err.message)
+    console.log('setSavePath')
+    console.log(err)
     res.json({error: err.message})
   })
 }
@@ -40,7 +42,8 @@ function startSuite (req, res) {
     fs.mkdirSync(currentPath)
     res.json({id: id})
   }).catch(err => {
-    console.log(err.message)
+    console.log('startSuite')
+    console.log(err)
     res.json({error: err.message})
   })
 }
@@ -103,7 +106,8 @@ function createScenario (req, res) {
   sqlite.scenario.createScenario(req.body).then(id => {
     res.json({id: id})
   }).catch(err => {
-    console.log(err.message)
+    console.log('createScenario')
+    console.log(err)
     res.json({error: err.message})
   })
 }
@@ -113,7 +117,8 @@ function endScenario (req, res) {
   sqlite.scenario.endScenario(req.body).then(id => {
     res.json({})
   }).catch(err => {
-    console.log(err.message)
+    console.log('endScenario')
+    console.log(err)
     res.json({error: err.message})
   })
 }
@@ -130,7 +135,8 @@ function mark (req, res) {
   sqlite.mark.createMark(req.body).then(() => {
     res.json({})
   }).catch(err => {
-    console.log(err.message)
+    console.log('mark')
+    console.log(err)
     res.json({error: err.message})
   })
 }
@@ -146,7 +152,8 @@ function getRouteActions (req, res) {
   sqlite.operation.getRouteActions(req.body).then((actions) => {
     res.json({'actions': actions})
   }).catch(err => {
-    console.log(err.message)
+    console.log('getRouteActions')
+    console.log(err)
     res.json({error: err.message})
   })
 }
@@ -157,7 +164,8 @@ function getEventActions (req, res) {
   sqlite.operation.getEventActions(req.body).then((actions) => {
     res.json({'actions': actions})
   }).catch(err => {
-    console.log(err.message)
+    console.log('getEventActions')
+    console.log(err)
     res.json({error: err.message})
   })
 }
@@ -166,7 +174,8 @@ function getDataCenterActions (req, res) {
   sqlite.operation.getDataCenterActions(req.body).then((actions) => {
     res.json({'actions': actions})
   }).catch(err => {
-    console.log(err.message)
+    console.log('getDataCenterActions')
+    console.log(err)
     res.json({error: err.message})
   })
 }
